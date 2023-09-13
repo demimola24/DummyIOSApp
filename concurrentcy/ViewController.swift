@@ -15,8 +15,10 @@ class ViewController: UIViewController {
         Task {
             do{
                 await print( try PokeAPI_Helper.fetch())
-            } catch {
-                print(error)
+            } catch PokeAPI_Errors.CANNOT_CONVERT_STRING_TO_URL {
+                print("Please insert connect url")
+            } catch let err {
+                print(err)
             }
         }
     }

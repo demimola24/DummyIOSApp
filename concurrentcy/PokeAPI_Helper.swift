@@ -13,19 +13,23 @@ enum PokeAPI_Errors: Error {
 }
 
 class PokeAPI_Helper{
-    static private let baseURL_String = ""
+    static private let baseURL_String = "https://pokeapi.co/api/v2/"
     
     static public func fetch() async throws -> Any{
         guard
             let url = URL(string: baseURL_String)
         else {throw PokeAPI_Errors.CANNOT_CONVERT_STRING_TO_URL}
         
-        let (data, response) = try! await URLSession.shared.data(from: url)
+        do{
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
+            //print(response)
+            
+            let jsonObject = try JSONSerialization.jsonObject(with: data)
         
-        print(response)
-        
-        let jsonObject = try! JSONSerialization.jsonObject(with: data)
-        
-        return jsonObject
+            return jsonObject
+        } catch {
+            throw error
+        }
     }
 }
