@@ -12,8 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var callPokeAPI: UIButton!
     
     @IBAction func callPokeApi(_ sender: Any) {
-        
-        
+        Task {
+            do{
+                await print( try PokeAPI_Helper.fetch())
+            } catch {
+                print(error)
+            }
+        }
     }
     
     override func viewDidLoad() {
