@@ -13,6 +13,7 @@
 		DB0A10682AAF49C50039DE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A10662AAF49C50039DE1C /* Main.storyboard */; };
 		DB0A106A2AAF49C70039DE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0A10692AAF49C70039DE1C /* Assets.xcassets */; };
 		DB0A106D2AAF49C70039DE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A106B2AAF49C70039DE1C /* LaunchScreen.storyboard */; };
+		DB0A10752AAF506C0039DE1C /* PokeAPI_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A10742AAF506C0039DE1C /* PokeAPI_Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DB0A10692AAF49C70039DE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB0A106C2AAF49C70039DE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB0A106E2AAF49C70039DE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0A10742AAF506C0039DE1C /* PokeAPI_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI_Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				DB0A10602AAF49C50039DE1C /* AppDelegate.swift */,
 				DB0A10622AAF49C50039DE1C /* SceneDelegate.swift */,
 				DB0A10642AAF49C50039DE1C /* ViewController.swift */,
+				DB0A10742AAF506C0039DE1C /* PokeAPI_Helper.swift */,
 				DB0A10662AAF49C50039DE1C /* Main.storyboard */,
 				DB0A10692AAF49C70039DE1C /* Assets.xcassets */,
 				DB0A106B2AAF49C70039DE1C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				DB0A10652AAF49C50039DE1C /* ViewController.swift in Sources */,
 				DB0A10612AAF49C50039DE1C /* AppDelegate.swift in Sources */,
 				DB0A10632AAF49C50039DE1C /* SceneDelegate.swift in Sources */,
+				DB0A10752AAF506C0039DE1C /* PokeAPI_Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
