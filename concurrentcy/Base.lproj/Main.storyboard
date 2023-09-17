@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,11 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyG-sw-iOC">
-                                <rect key="frame" x="153" y="408.66666666666669" width="87" height="35"/>
+                                <rect key="frame" x="150.66666666666666" y="408.66666666666669" width="92" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="PokeAPI"/>
+                                <buttonConfiguration key="configuration" style="filled" title="boredapi"/>
                                 <connections>
-                                    <action selector="callPokeApi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9i3-Mq-N8T"/>
+                                    <action selector="callBoredApi:" destination="BYZ-38-t0r" eventType="touchDown" id="gPD-BI-QgB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI7-cj-zzi">
+                                <rect key="frame" x="153" y="551" width="87" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Digimon"/>
+                                <connections>
+                                    <action selector="callDigimonApi:" destination="BYZ-38-t0r" eventType="touchDown" id="VM2-e9-32j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDc-hM-maR">
+                                <rect key="frame" x="159" y="480" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="gemini"/>
+                                <connections>
+                                    <action selector="callMmobombApi:" destination="BYZ-38-t0r" eventType="touchDown" id="39l-vJ-EMd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +51,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="callPokeAPI" destination="ZyG-sw-iOC" id="Opo-eT-8r7"/>
+                        <outlet property="callDigimonAPI" destination="DI7-cj-zzi" id="BsP-yO-AuA"/>
+                        <outlet property="callMmobAPI" destination="iDc-hM-maR" id="DMT-n5-bsg"/>
+                        <outlet property="callPokeAPI" destination="ZyG-sw-iOC" id="8rL-2I-ti3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

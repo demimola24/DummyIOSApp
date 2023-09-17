@@ -11,11 +11,39 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var callPokeAPI: UIButton!
     
-    @IBAction func callPokeApi(_ sender: Any) {
+    @IBOutlet weak var callMmobAPI: UIButton!
+    
+    @IBOutlet weak var callDigimonAPI: UIButton!
+    
+    @IBAction func callBoredApi(_ sender: Any) {
         Task {
             do{
-                await print( try PokeAPI_Helper.fetch())
-            } catch PokeAPI_Errors.CANNOT_CONVERT_STRING_TO_URL {
+                await print( try API_Helper.fetchBoredAPI())
+            } catch API_Errors.CANNOT_CONVERT_STRING_TO_URL {
+                print("Please insert connect url")
+            } catch let err {
+                print(err)
+            }
+        }
+    }
+    
+    @IBAction func callMmobombApi(_ sender: Any) {
+        Task {
+            do{
+                await print( try API_Helper.fetchMmobombAPI())
+            } catch API_Errors.CANNOT_CONVERT_STRING_TO_URL {
+                print("Please insert connect url")
+            } catch let err {
+                print(err)
+            }
+        }
+    }
+    
+    @IBAction func callDigimonApi(_ sender: Any) {
+        Task {
+            do{
+                await print( try API_Helper.fetchDigimonAPI())
+            } catch API_Errors.CANNOT_CONVERT_STRING_TO_URL {
                 print("Please insert connect url")
             } catch let err {
                 print(err)
